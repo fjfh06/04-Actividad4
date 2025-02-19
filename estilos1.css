@@ -13,6 +13,13 @@
     --form-width: 400px;
 }
 
+.ocultalabel{
+    color: var(--form-background-color);
+    padding: 0;
+    margin: 0;
+    height: 0;
+}
+
 /* Aplicación de las variables */
 body {
     font-family: var(--font-family);
@@ -28,6 +35,12 @@ form {
     background-color: var(--form-background-color);
     border-radius: var(--border-radius);
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+form h1{
+    text-align: center;
+    color: black;
+    margin-bottom: 24px;
 }
 
 label {
@@ -49,6 +62,11 @@ input[type="password"] {
 input[type="checkbox"] {
     margin-top: 1px;
 }
+.check{
+    color: grey;
+    font-size: 12px;
+    display: inline-flex;
+}
 
 button {
     font-family: var(--font-family);
@@ -65,3 +83,4 @@ button {
 button:hover {
     background-color: var(--secondary-color);
 }
+
