@@ -6,18 +6,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>04-Actividad4</title>
     <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="./estilos1.css">
-    <!--<link rel="stylesheet" href="./estilos2.css">-->
+    <link id="estilos" rel="stylesheet" href="./estilos1.css">
 </head>
 
 <body>
     <form action="https://fjfh06.ddns.net" target="_blank">
+        <button type="button" onclick="cambiarCSS()" id="tema">🌙</button>
         <h1>Iniciar Sesión</h1>
-        <div>
+        <div id="inputs">
             <label for="usuario" class="ocultalabel">Usuario</label>
             <input type="text" id="usuario" name="usuario" placeholder="Usuario" required>
-        </div>
-        <div>
+
             <label for="contra" class="ocultalabel">Contraseña</label>
             <input type="password" id="contra" name="contra" placeholder="Contraseña" required>
         </div>
@@ -30,10 +29,38 @@
                 <input type="checkbox" id="mostrarContra" name="mostrarContra">
                 Mostrar Contraseña
             </label>
-
         </div>
         <button type="submit">Iniciar Sesión</button>
     </form>
+    
+    <script>
+        // Script para cambiar el tipo del campo de contraseña
+        const mostrarContra = document.getElementById('mostrarContra');
+        const contra = document.getElementById('contra');
+    
+        mostrarContra.addEventListener('change', function() {
+            if (this.checked) {
+                contra.type = 'text';
+            } else {
+                contra.type = 'password';
+            }
+        });
+
+        // Función para cambiar el CSS
+        function cambiarCSS() {
+            let link = document.getElementById("estilos");
+            let boto = document.getElementById("tema");
+            // Cambiar el archivo CSS entre los dos disponibles
+            if (link.href.includes("estilos1.css")) {
+                link.href = "./estilos2.css";
+                boto.textContent = "☀️";
+            } else {
+                link.href = "./estilos1.css";
+                boto.textContent = "🌙";
+            }
+            
+        }
+    </script>
 </body>
 
 </html>
