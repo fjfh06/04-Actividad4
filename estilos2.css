@@ -5,11 +5,11 @@
     --background-color: #282828;
     --form-background-color: #2E2E2E;
     --border-color: #888;
-    --font-family: 'Georgia', serif;
+    --font-family: "Open Sans", serif;
     --font-size: 18px;
     --input-padding: 12px;
     --button-padding: 12px;
-    --border-radius: 6px;
+    --border-radius: 16px;
     --form-width: 420px;
 }
 
@@ -26,7 +26,7 @@ form {
     margin: 50px auto;
     padding: 20px;
     background-color: var(--form-background-color);
-    border-radius: 8px;
+    border-radius: var(--border-radius);
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
@@ -39,9 +39,9 @@ label {
 
 input[type="text"],
 input[type="password"] {
-    width: 250px;
+    width: 94%;
     padding: var(--input-padding);
-    margin-bottom: 20px;
+    margin-bottom: 10px;
     border: 1px solid var(--border-color);
     border-radius: var(--border-radius);
     font-size: var(--font-size);
@@ -54,6 +54,7 @@ input[type="checkbox"] {
 }
 
 button {
+    font-family: var(--font-family);
     width: 100%;
     padding: var(--button-padding);
     background-color: var(--primary-color);
